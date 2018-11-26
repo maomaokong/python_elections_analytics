@@ -1,0 +1,23 @@
+{
+  "APP_NAME":"Elections_Analytics",
+  "VERSION":"0.0.1",
+  "ENV_REMARK":"TBD",
+  "ENV_OPTION":"1-UAT; 9-PROD",
+  "ENV":1,
+  "PATHS":{
+    "SOURCE_CODE":"src",
+    "DATA":"data",
+    "DATA_INPUT":"input",
+    "DATA_OUTPUT":"output",
+    "LOG":"log",
+    "TEST":"test",
+    "DB":"db"
+  },
+  "INPUT":{
+    "ELECTION_DATA":"elections_raw_data.csv"
+  },
+  "DB":{
+    "FILENAME":"elections_result.sqlite",
+    "CREATE_TBL_QUERY_01":"CREATE TABLE IF NOT EXISTS Elections (id INTEGER PRIMARY KEY AUTOINCREMENT, year TEXT, Democrat_Votes_1k NUMERIC, Republican_Votes_1k NUMERIC, Democrat_Electoral_Votes NUMERIC, Republican_Electoral_Votes NUMERIC, Democrat_Candidate TEXT, Republican_Candidate TEXT, Votes_Diff REAL, Votes_Positive NUMERIC);"
+  }
+}
